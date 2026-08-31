@@ -1,0 +1,22 @@
+class solution{
+  public int maxProfit(int[] prices){
+    int minPrice = prices[0];
+    int maxProfit = 0;
+
+    for(int i = 1; i<prices.length; i++){
+      if(prices[i] < minPrices){
+        minPrices = prices[i];
+      }
+      int profit = prices[i]-minPrices;
+      if(profit>maxProfit){
+        maxProfit = profit;
+      }
+    }
+    return maxProfit;
+  }
+}
+
+---------------------------------------------------------------------------
+T.C = O(n)
+S.C = O(1)
+
